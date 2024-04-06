@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div
+      class="container mt-5 p-3"
+      style="width: 60%; background-color: aquamarine; border-radius: 10px"
+    >
+      <div class="form-group">
+        <div class="d-flex mt-5 mb-5">
+          <input
+            type="text"
+            class="form-control"
+            id="newNumber"
+            placeholder="nhập số n"
+            style="width: 40%; margin-right: 50px"
+          />
+          <button class="btn btn-primary" onclick="themSo()">Thêm Số</button>
+        </div>
+        <h1
+          id="result"
+          class="p-2"
+          style="
+            height: 40px;
+            width: 100%;
+            background-color: rgb(101, 199, 101);
+            border-radius: 8px;
+            font-size: 18px;
+            color: rgb(18, 8, 94);
+          "
+        ></h1>
+        <p>
+          <button
+            class="btn btn-primary d-flex justify-content-between"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseExample1"
+            aria-expanded="false"
+            aria-controls="collapseExample1"
+            style="width: 100%"
+            onclick="rotateAngleDown1()"
+          >
+            <div class="button__text">1.Tổng số dương</div>
+            <div class="button__icon">
+              <i class="fa fa-angle-down down__1" style="transition: 0.1s"></i>
+            </div>
+          </button>
+        </p>
+        <div class="collapse" id="collapseExample1">
+          <div class="card card-body mb-3">
+            <button
+              class="btn btn-danger"
+              style="width: 20%"
+              onclick="tinhTongSoDuong()"
+            >
+              Tính Tổng
+            </button>
+            <h1
+              id="result__1"
+              style="
+                width: 100%;
+                height: 40px;
+                background-color: rgb(72, 192, 72);
+                margin-top: 30px;
+                border-radius: 8px;
+                font-size: 20px;
+                padding: 10px;
+              "
+            ></h1>
+          </div>
+        </div>
+        <p>
+          <button
+            class="btn btn-primary d-flex justify-content-between"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseExample2"
+            aria-expanded="false"
+            aria-controls="collapseExample2"
+            style="width: 100%"
+            onclick="rotateAngleDown2()"
+          >
+            <div class="button__text">2.Đếm số dương</div>
+            <div class="button__icon">
+              <i class="fa fa-angle-down down__2" style="transition: 0.1s"></i>
+            </div>
+          </button>
+        </p>
+        <div class="collapse" id="collapseExample2">
+          <div class="card card-body mb-3">
+            <button
+              class="btn btn-danger"
+              style="width: 20%"
+              onclick="demSoDuong()"
+            >
+              Đếm số
+            </button>
+            <h1
+              id="result__2"
+              style="
+                width: 100%;
+                height: 40px;
+                background-color: rgb(72, 192, 72);
+                margin-top: 30px;
+                border-radius: 8px;
+                font-size: 20px;
+                padding: 10px;
+              "
+            ></h1>
+          </div>
+        </div>
+        <p>
+          <button
+            class="btn btn-primary d-flex justify-content-between"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseExample3"
+            aria-expanded="false"
+            aria-controls="collapseExample3"
+            style="width: 100%"
+            onclick="rotateAngleDown3()"
+          >
+            <div class="button__text">3.Tìm số nhỏ nhất</div>
+            <div class="button__icon">
+              <i class="fa fa-angle-down down__3" style="transition: 0.1s"></i>
+            </div>
+          </button>
+        </p>
+        <div class="collapse" id="collapseExample3">
+          <div class="card card-body mb-3">
+            <button
+              class="btn btn-danger"
+              style="width: 20%"
+              onclick="timSoNhoNhat()"
+            >
+              Tìm số nhỏ nhất
+            </button>
+            <h1
+              id="result__3"
+              style="
+                width: 100%;
+                height: 40px;
+                background-color: rgb(72, 192, 72);
+                margin-top: 30px;
+                border-radius: 8px;
+                font-size: 20px;
+                padding: 10px;
+              "
+            ></h1>
+          </div>
+        </div>
+        <p>
+          <button
+            class="btn btn-primary d-flex justify-content-between"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseExample4"
+            aria-expanded="false"
+            aria-controls="collapseExample4"
+            style="width: 100%"
+            onclick="rotateAngleDown4()"
+          >
+            <div class="button__text">4.Tìm số dương nhỏ nhất</div>
+            <div class="button__icon">
+              <i class="fa fa-angle-down down__4" style="transition: 0.1s"></i>
+            </div>
+          </button>
+        </p>
+        <div class="collapse" id="collapseExample4">
+          <div class="card card-body mb-3">
+            <button
+              class="btn btn-danger"
+              style="width: 20%"
+              onclick="timSoDuongNhoNhat()"
+            >
+              Tìm số dương nhỏ nhất
+            </button>
+            <h1
+              id="result__4"
+              style="
+                width: 100%;
+                height: 40px;
+                background-color: rgb(72, 192, 72);
+                margin-top: 30px;
+                border-radius: 8px;
+                font-size: 20px;
+                padding: 10px;
+              "
+            ></h1>
+          </div>
+        </div>
+        <p>
+          <button
+            class="btn btn-primary d-flex justify-content-between"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseExample5"
+            aria-expanded="false"
+            aria-controls="collapseExample5"
+            style="width: 100%"
+            onclick="rotateAngleDown5()"
+          >
+            <div class="button__text">5.Tìm số chẵn cuối cùng</div>
+            <div class="button__icon">
+              <i class="fa fa-angle-down down__5" style="transition: 0.1s"></i>
+            </div>
+          </button>
+        </p>
+        <div class="collapse" id="collapseExample5">
+          <div class="card card-body mb-3">
+            <button
+              class="btn btn-danger"
+              style="width: 20%"
+              onclick="timSoChanCuoiCung()"
+            >
+              Tìm số chẵn cuối cùng
+            </button>
+            <h1
+              id="result__5"
+              style="
+                width: 100%;
+                height: 40px;
+                background-color: rgb(72, 192, 72);
+                margin-top: 30px;
+                border-radius: 8px;
+                font-size: 20px;
+                padding: 10px;
+              "
+            ></h1>
+          </div>
+        </div>
+        <p>
+          <button
+            class="btn btn-primary d-flex justify-content-between"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseExample6"
+            aria-expanded="false"
+            aria-controls="collapseExample6"
+            style="width: 100%"
+            onclick="rotateAngleDown6()"
+          >
+            <div class="button__text">6.Đổi chỗ</div>
+            <div class="button__icon">
+              <i class="fa fa-angle-down down__6" style="transition: 0.1s"></i>
+            </div>
+          </button>
+        </p>
+        <div class="collapse" id="collapseExample6">
+          <div class="card card-body mb-3">
+            <div class="cover__input__ex__6 mb-3">
+              <input
+                type="text"
+                id="input__1"
+                placeholder="nhập vị trí thứ 1"
+              />
+              <input
+                type="text"
+                id="input__2"
+                placeholder="Nhập vị trí thứ 2"
+              />
+            </div>
+            <button
+              class="btn btn-danger"
+              style="width: 20%"
+              onclick="doiCho()"
+            >
+              Đổi chỗ
+            </button>
+            <h1
+              id="result__6"
+              style="
+                width: 100%;
+                height: 40px;
+                background-color: rgb(72, 192, 72);
+                margin-top: 30px;
+                border-radius: 8px;
+                font-size: 20px;
+                padding: 10px;
+              "
+            ></h1>
+          </div>
+        </div>
+        <p>
+          <button
+            class="btn btn-primary d-flex justify-content-between"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseExample7"
+            aria-expanded="false"
+            aria-controls="collapseExample7"
+            style="width: 100%"
+            onclick="rotateAngleDown7()"
+          >
+            <div class="button__text">7.Săp xếp tăng dần</div>
+            <div class="button__icon">
+              <i class="fa fa-angle-down down__7" style="transition: 0.1s"></i>
+            </div>
+          </button>
+        </p>
+        <div class="collapse" id="collapseExample7">
+          <div class="card card-body mb-3">
+            <button
+              class="btn btn-danger"
+              style="width: 20%"
+              onclick="sapXep()"
+            >
+              sắp xếp
+            </button>
+            <h1
+              id="result__7"
+              style="
+                width: 100%;
+                height: 40px;
+                background-color: rgb(72, 192, 72);
+                margin-top: 30px;
+                border-radius: 8px;
+                font-size: 20px;
+                padding: 10px;
+              "
+            ></h1>
+          </div>
+        </div>
+        <p>
+          <button
+            class="btn btn-primary d-flex justify-content-between"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseExample8"
+            aria-expanded="false"
+            aria-controls="collapseExample8"
+            style="width: 100%"
+            onclick="rotateAngleDown8()"
+          >
+            <div class="button__text">8.Tìm số nguyên tố đầu tiên</div>
+            <div class="button__icon">
+              <i class="fa fa-angle-down down__8" style="transition: 0.1s"></i>
+            </div>
+          </button>
+        </p>
+        <div class="collapse" id="collapseExample8">
+          <div class="card card-body mb-3">
+            <button
+              class="btn btn-danger"
+              style="width: 20%"
+              onclick="timSoNguyenToDauTien()"
+            >
+              Tìm kiếm
+            </button>
+            <h1
+              id="result__8 "
+              style="
+                width: 100%;
+                height: 40px;
+                background-color: rgb(72, 192, 72);
+                margin-top: 30px;
+                border-radius: 8px;
+                font-size: 20px;
+                padding: 10px;
+              "
+            ></h1>
+          </div>
+        </div>
+        <p>
+          <button
+            class="btn btn-primary d-flex justify-content-between"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseExample9"
+            aria-expanded="false"
+            aria-controls="collapseExample9"
+            style="width: 100%"
+            onclick="rotateAngleDown9()"
+          >
+            <div class="button__text">9.Đếm số nguyên</div>
+            <div class="button__icon">
+              <i class="fa fa-angle-down down__9" style="transition: 0.1s"></i>
+            </div>
+          </button>
+        </p>
+        <div class="collapse" id="collapseExample9">
+          <div class="card card-body mb-3">
+            <button
+              class="btn btn-danger"
+              style="width: 20%"
+              onclick="demSoNguyen()"
+            >
+              Đếm các số nguyên
+            </button>
+            <h1
+              id="result__9"
+              style="
+                width: 100%;
+                height: 40px;
+                background-color: rgb(72, 192, 72);
+                margin-top: 30px;
+                border-radius: 8px;
+                font-size: 20px;
+                padding: 10px;
+              "
+            ></h1>
+          </div>
+        </div>
+        <p>
+          <button
+            class="btn btn-primary d-flex justify-content-between"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseExample10"
+            aria-expanded="false"
+            aria-controls="collapseExample10"
+            style="width: 100%"
+            onclick="rotateAngleDown10()"
+          >
+            <div class="button__text">
+              10. so sánh số lượng số âm và số dương
+            </div>
+            <div class="button__icon">
+              <i class="fa fa-angle-down down__10" style="transition: 0.1s"></i>
+            </div>
+          </button>
+        </p>
+        <div class="collapse" id="collapseExample10">
+          <div class="card card-body mb-3">
+            <div class="card card-body mb-3">
+              <button
+                class="btn btn-danger"
+                style="width: 20%"
+                onclick="soSanh()"
+              >
+                so sánh
+              </button>
+              <h1
+                id="result__10"
+                style="
+                  width: 100%;
+                  height: 40px;
+                  background-color: rgb(72, 192, 72);
+                  margin-top: 30px;
+                  border-radius: 8px;
+                  font-size: 20px;
+                  padding: 10px;
+                "
+              ></h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+    <script src="./down.js"></script>
+  </body>
+</html>
